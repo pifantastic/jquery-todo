@@ -13,7 +13,7 @@
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js"></script>
   <script>
     $(document).ready(function() {
-      $.getJSON("http://localhost/server.php", function(data) {
+      $.getJSON("server.php", function(data) {
         for (var x = 0; x < data.length; x++) {
           $('#list').append('<li>' + data[x] + '</li>');
         }
@@ -39,7 +39,7 @@
         });
         
         $.ajax({
-          url: "http://localhost/server.php",
+          url: "server.php",
           data: { list: items }
         });
       }
